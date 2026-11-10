@@ -1,0 +1,35 @@
+{
+    "project_name": "Arabic News Headline Generator",
+    "format": "ONNX",
+    "opset_version": 17,
+    "runtime": "onnxruntime-web",
+    "architectures": {
+        "simple_rnn": {
+            "encoder": "models/simple_rnn/encoder.onnx",
+            "decoder": "models/simple_rnn/decoder.onnx",
+            "type": "RNN"
+        },
+        "lstm": {
+            "encoder": "models/lstm/encoder.onnx",
+            "decoder": "models/lstm/decoder.onnx",
+            "type": "LSTM"
+        }
+    },
+    "vocabulary": {
+        "stoi": "vocabulary/stoi.json",
+        "itos": "vocabulary/itos.json",
+        "size": 30000
+    },
+    "special_tokens": {
+        "PAD": 0,
+        "UNK": 1,
+        "SOS": 2,
+        "EOS": 3
+    },
+    "max_article_length": 80,
+    "max_title_length": 20,
+    "embedding_dim": 256,
+    "hidden_dim": 256,
+    "batch_size": 1,
+    "decoding": "greedy"
+}

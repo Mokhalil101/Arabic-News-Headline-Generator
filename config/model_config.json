@@ -1,0 +1,21 @@
+{
+    "project_name": "Arabic News Headline Generator",
+    "architectures": [
+        "SimpleRNN",
+        "LSTM"
+    ],
+    "embedding_dim": 256,
+    "hidden_dim": 256,
+    "dropout": 0.3,
+    "max_article_length": 80,
+    "max_title_length": 20,
+    "batch_size": 64,
+    "epochs": 30,
+    "teacher_forcing_ratio": 0.5,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "vocab_size": 30000,
+    "random_seed": 42,
+    "device_used": "cuda",
+    "attention": false
+}
